@@ -1,0 +1,41 @@
+/* Ensure the container takes full height */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+}
+
+header {
+  background: #f8f9fa;
+  padding: 1rem;
+  text-align: center;
+}
+
+main.main-content {
+  flex: 1; /* This allows the main content to take up available space */
+  overflow-y: auto; /* Adds scrolling if content overflows */
+  padding: 1rem;
+  background: #e9ecef;
+}
+
+footer.footer {
+  background: #ffffff;
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+@media (max-width: 600px) {
+  header, footer {
+    padding: 0.5rem;
+  }
+
+  .main-content {
+    padding: 0.5rem;
+  }
+}

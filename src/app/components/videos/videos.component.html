@@ -1,0 +1,22 @@
+<div class="videos-wrapper">
+  <div *ngIf="videos.length === 0" class="empty-state">
+    <p>No videos available. Add some videos to get started!</p>
+  </div>
+  
+  <div *ngFor="let video of videos" class="video-card">
+    <h3 class="video-title">{{ video.title }}</h3>
+    <p class="video-description">{{ video.description }}</p>
+    <p>{{video.likes}}</p>
+    <div class="video-actions">
+      <button (click)="likeVideo(video)" class="like-button">
+        👍 Like 
+      </button>
+      <button (click)="dislikeVideo(video)" class="dislike-button">
+        👎 Dislike
+      </button>
+      <button (click)="deleteVideo(video)" class="delete-button">
+        🗑️ Delete
+      </button>
+    </div>
+  </div>
+</div>

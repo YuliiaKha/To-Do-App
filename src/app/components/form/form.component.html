@@ -1,0 +1,33 @@
+<div class="video-form">
+  <h2>Add a New Video</h2>
+  <form (ngSubmit)="addVideo()" class="form">
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input 
+        type="text" 
+        id="title" 
+        [(ngModel)]="newVideo.title" 
+        name="title" 
+        required 
+        placeholder="Enter video title" 
+        class="form-control"
+      />
+    </div>
+    
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea 
+        id="description" 
+        [(ngModel)]="newVideo.description" 
+        name="description" 
+        required 
+        placeholder="Enter video description" 
+        class="form-control"
+      ></textarea>
+    </div>
+    
+    <div class="form-group">
+      <button type="submit" class="btn btn-submit">Add Video</button>
+    </div>
+  </form>
+</div>
